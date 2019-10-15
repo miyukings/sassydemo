@@ -1,0 +1,90 @@
+/* BODY */
+
+
+body {
+  font-family: $body-fontfamily;
+  font-size: 100%;
+  line-height: 1.4em;
+  color: $color-text-body; 
+}
+
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: $heading-fontfamily;
+  margin: .5em 0;
+  font-weight: 400;
+}
+
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+  } 
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.1;
+  } 
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+  } 
+
+  p {
+    max-width: 35em;
+  }
+
+
+   /* LINKS */ 
+   a { color: $color-links;}
+   a:hover { color: $color-links-dark;}
+
+   /* HORIZONTAL RULE */ 
+   hr { 
+      border: 0;
+      height: 1px;
+      background: rgba(0,0,0,.15);
+      margin: 4em 0;
+   }
+
+    /* HELPER */
+  .sectionhead {
+    font-family: $body-fontfamily;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+  }
+  .sectionhead:after {
+    display: block;
+    content:"";
+    width: 50px;
+    border: 4px solid $color-accent;
+    margin: 1em auto 6em auto;
+  }
+
+  .meta {
+    font-size: .8em;
+    //color: $color-midgray;
+    margin:0 0 2em 0;
+  }
+  
+  /* Type Specimen */
+  .mainhead {
+      font-size: 6em;
+      color: $color-accent;
+      margin-bottom: 0; 
+  }
+
+  .subhead {
+      //color: rgb(151, 151, 16);
+      //font-family: $body-fontfamily;
+      margin-bottom: 1em;
+  }
+
+ 
+
+  
+  
+  

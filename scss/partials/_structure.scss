@@ -1,0 +1,71 @@
+/* site header and footer */
+
+.site-header, .site-footer {
+    background-color: $color-accent;
+    padding: 1em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-family: $body-fontfamily;
+        font-size: 1.5em;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+} 
+/* SITE HEADER */
+.site-header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+/* Site Footer */
+
+.site-footer {
+    justify-content: center;
+    margin-top: 6em;
+}
+
+.site-nav {
+   ul {
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       display: flex;
+}
+
+a {
+    display: block;
+    padding: 1em;
+  }
+}
+ section {
+     padding: ４em 0;
+     min-height: 100vh;
+     display: grid;
+     place-items: center;
+ }
+
+
+/* Hero Sections */
+
+.hero {
+    background-color: $color-hero-bg;
+    padding: 6em 1em;
+    text-align: center;
+    color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1450262622215-e1167c339ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80  );
+    background-size: cover;
+   
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(8, 3, 78);
+    }
+}
