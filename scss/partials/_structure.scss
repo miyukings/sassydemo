@@ -10,8 +10,8 @@
     h1 {
         font-family: $body-fontfamily;
         font-size: 1.5em;
+        margin: .5em 0 0 0; /* to adjust baseline with nav text */
     }
-
     a {
         color: #fff;
         text-decoration: none;
@@ -24,26 +24,48 @@
     width: 100%;
 }
 
-/* Site Footer */
-
+/* SITE FOOTER */
 .site-footer {
     justify-content: center;
     margin-top: 6em;
+    background-color: #000;
 }
 
+/* SITE NAVIGATION */
 .site-nav {
-   ul {
-       margin: 0;
-       padding: 0;
-       list-style: none;
-       display: flex;
+    position: fixed;
+    width:100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    ul {
+        background: rgba(255,0,0,.5);
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        display: block;
+        padding: 1em;
+    }
+    &.active {
+        height: 100%;
+        ul {
+            display:block;
+        }
+    }
 }
 
-a {
-    display: block;
-    padding: 1em;
-  }
+/* Menu Button */
+.menu-button {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    cursor: pointer;
 }
+
  section {
      padding: ４em 0;
      min-height: 100vh;
@@ -59,13 +81,56 @@ a {
     padding: 6em 1em;
     text-align: center;
     color: #fff;
-    background-image: url(https://images.unsplash.com/photo-1450262622215-e1167c339ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80  );
-    background-size: cover;
+    background-color: #000;
+    // background-image: url(https://images.unsplash.com/photo-1450262622215-e1167c339ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80  );
+    background-size: cover; //
    
 
     p {
         margin-left: auto;
         margin-right: auto;
-        color: rgb(8, 3, 78);
+        color:#fff;
+    }
+
+}
+
+/* Layout section */
+#layout {
+    @media (min-width: $breakpoint-small) { 
+    
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .image-block {
+            width: 50%;
+            //background: rgba(255,0,0,.3);
+        }
+        .text-block {
+            width: 50%;
+            transform: translateX(-2em);
+            // margin-left: -2em;
+            //background: rgba(0,0,255,.3);
+        }
+    }
+}
+
+/* Layout section */
+.split-crossed-reversed {
+    @media (min-width: $breakpoint-small) { 
+    
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        .image-block {
+            width: 50%;
+        }
+        .text-block {
+            width: 50%;
+            transform: translateX(2em);
+            // margin-left: -2em;
+        }
     }
 }

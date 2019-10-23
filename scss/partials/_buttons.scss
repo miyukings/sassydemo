@@ -10,10 +10,10 @@ button,
     padding: 1em 2em;
     display: inline-block;
     margin: .5em;
-    border: 1px solid $color-links;
-    border-radius: 2em;
+    border: 1px solid #fff;
+    border-radius: .5em;
     cursor: pointer;
-
+    text-decoration: none;
 
     &:hover {
         background-color: $color-links-dark;
@@ -29,5 +29,15 @@ button,
         color: #fff;
         border-color: $color-links-dark;
     }
+  }
+  &.dark {
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
+
+      &:hover {
+          background-color: #fff;
+          color: #000;
+      }
   }
 }
