@@ -256,7 +256,7 @@ body {
 
 /* SITE NAVIGATION */
 .site-nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -273,7 +273,10 @@ body {
     display: block;
     padding: 1em; }
   .site-nav.active {
-    height: 100%; }
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+    background: red; }
     .site-nav.active ul {
       display: block; }
 
