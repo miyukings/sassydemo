@@ -23,7 +23,7 @@
       <h1><a href="#">SD19</a></h1>
     </div>
     <nav class="site-nav">
-      <div class="menu-button">Menu</div>
+      <div class="menu-button navicon">Menu</div>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#typography">Typography</a></li>
@@ -41,7 +41,7 @@
     </div>
   </section>
 
-  <section id="typography">
+  <section id="typography" data-scroll="out">
     <div class="container">
 
       <h1 class="mainhead">Headline Title</h1>
@@ -57,11 +57,11 @@
     </div>
   </section>
 
-  <section id="layout" class="split-crossed-left">
+  <section id="layout" class="split-crossed-left" data-scroll="out">
     <div class="container">
 
       <div class="image-block">
-        <img src="../img/img1500x500.png" alt="1500x500">
+        <img src="../img/img500x500.png" alt="1500x500">
       </div>
 
       <div class="text-block">
@@ -73,11 +73,11 @@
     </div>
   </section>
 
-  <section class="split-crossed-reversed">
+  <section id="layout" class="split-crossed-left" data-scroll="out">
     <div class="container">
 
       <div class="image-block">
-        <img src="../img/img1500x500.png" alt="1500x500">
+        <img src="../img/img500x500.png" alt="1500x500">
       </div>
 
       <div class="text-block">
@@ -103,6 +103,14 @@
   <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+  <!-- SCROOL OUT SCROLL TRIGGERD ANIMATION -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>">
+  <script>
+    ScrollOut({
+      threshold: 0.4
+    });
   </script>
 
   <!--MAIN JS -->

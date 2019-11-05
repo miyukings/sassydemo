@@ -2,7 +2,7 @@
 .site-header, .site-footer {
     background-color: $color-accent;
     padding: 1em;
-    color: #fff;
+    color: white;
     display: flex;
     justify-content: space-between;
 
@@ -97,11 +97,40 @@
     top: 2em;
     right: 2em;
     cursor: pointer;
-    z-index: ２00;
-     
+    z-index: ２00;    
 }
+ .menu-button.navicon {
+     font-size: 1.5em;
+     top: 1em;
+     right: 1em;
+     line-height: .75;
+     text-align: center;
+     width: 1em;
+     height: 1em;
+     overflow: hidden;
+     //background: pink;
+
+    &:before {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        content: "\2630";
+      
+        //background: green;
+        transform: rotate(0);
+       
+    }
+ }
+ .active .menu-button.navicon:before {
+     content: "\2715";
+     //background: blue;
+     transform: rotate(-90deg);
+     transition: .4s all ease-out;
+ }
+
 
  section {
+     
      padding: 6em 0;
      min-height: 100vh;
      display: grid;
@@ -161,3 +190,56 @@
         }
     }
 }
+
+/* SCROLL TRIGGERED ANIMATION VIA SCROLLOUT */
+[data-scroll] {
+    transition: opacity 1s;
+}
+[data-scroll="in"] {
+    opacity: 1;
+}
+[data-scroll="out"] { 
+    opacity: 0;
+}
+
+//SPLIT_CROSSED LEFT ANIMATION
+
+ [data-scroll].split-crossed-left .image-block,
+ [data-scroll].split-crossed-left .text-block {
+     transition: 1s transform ease-out;
+ }
+ [data-scroll="in"].split-crossed-left .image-block {
+     transform: translateX(0);
+ }
+ [data-scroll="in"].split-crossed-left .text-block {
+    transform: translateX(-2em);
+}
+[data-scroll="out"].split-crossed-left .image-block {
+    transform: translateX(2em);
+}
+
+[data-scroll].split-crossed-left .text-block {
+     transform: translateX(-4em);
+ } 
+
+
+ [data-scroll].split-crossed-reversed .image-block,
+ [data-scroll].split-crossed-reversed .text-block {
+     transition: 1s ease-out transform;
+ }
+ [data-scroll="in"].split-crossed-reversed .image-block {
+     transform: translateX(0);
+ }
+ [data-scroll="in"].split-crossed-reversed .text-block {
+    transform: translateX(-2em);
+}
+[data-scroll="out"].split-crossed-reversed .image-block {
+    transform: translateX(2m);
+}
+
+[data-scroll].split-crossed-reversed  .text-block {
+     transform: translateX(-4em);
+ }
+
+
+ 
