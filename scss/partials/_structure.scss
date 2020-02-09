@@ -1,24 +1,24 @@
 /* site header and footer */
 .site-header, .site-footer {
-    background-color: $color-accent;
+    background-color: $color-nav;
     padding: 1em;
-    color: white;
+    color: $type-color-body;
     display: flex;
     justify-content: space-between;
 
     h1 {
-        font-family: $body-fontfamily;
+        font-family: $type-color-body;
         font-size: 1.5em;
         margin: .5em 0 0 0; /* to adjust baseline with nav text */
     }
     a {
-        color: #fff;
+        color: $type-color-body;
         text-decoration: none;
     }
 } 
 /* SITE HEADER */
 .site-header {
-    background-color: transparent;
+    background-color: $color-nav;
     position: absolute;
     width: 100%;
 }
@@ -37,7 +37,7 @@
     top: 0;
     left: 0;
     display: grid;
-    place-items: center;
+    align-items: center;
     transition: all .4s ease;
     ul {
         position: fixed;
@@ -54,6 +54,7 @@
         transform: translateY(-30px);
     }
     a {
+        color: $color-nav;
         display: block;
         padding: .5em;
     }
@@ -62,7 +63,8 @@
         position: fixed;
         height: 100%;
         z-index: 100;
-        background:hotpink;
+        background: rgb(5, 141, 141);
+        color: #fff;
         ul {
             top: 50%;
         }
@@ -75,9 +77,8 @@
             &:nth-child(2) {transition-delay: .2s;}
             &:nth-child(3) {transition-delay: .4s;}
             &:nth-child(4) {transition-delay: .6s;}
-           
+           color: $color-nav;
         }
-           
     }
 }
 .site-footer .site-nav {
@@ -130,26 +131,95 @@
 
 
  section {
-     
      padding: 6em 0;
-     min-height: 100vh;
+     height: 100vh;
      display: grid;
-     place-items: center;
+     align-items: center;
  }
 
 /* Hero Sections */
+
+.hero .container {
+   
+    .half-circles {
+       align-items: baseline;
+    }
+}
+
+
+
 .hero {
     background-color: $color-hero-bg;
     padding: 6em 1em;
     color: #fff;
-    // background-image: url(https://images.unsplash.com/photo-1450262622215-e1167c339ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80  );
-    //background-size: cover; 
+
+    .container{
+        position: relative;
+        
+        
+        margin-top: 68vh;
+
+        h2 {
+            font-size: 4em;
+            margin: 0;
+            z-index: 600px;
+            color: $type-color-body; 
+        }
+    
+        p{ 
+            z-index: 600px;
+        }
+ 
+    .half-circles{ 
+position: absolute;
+
+.circle1 {
    
-    h2 {
-        font-size: 4qm;
-        margin: 0;
-        //color:#fff;
+    position: absolute;
+    width: 900px;
+    height: 450px;
+    border-radius: 450px 450px 0 0;
+    background: rgb(5, 141, 141);
+    z-index:100px;
+    bottom: 0;
+}
+.circle2 {
+   
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    border-radius: 400px 400px 0 0;
+    background: rgb(54, 196, 214);
+    z-index:200px;
+    bottom: 0;
+}
+
+.circle3 {
+  
+    position: absolute;
+    width:700px;
+    height: 350px;
+    border-radius: 350px 350px 0 0;
+    background:  rgb(143, 240, 243);
+    z-index:300px;
+    bottom: 0;
+}
+
+    .circle4 {
+      
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        border-radius: 300px 300px 0 0;
+        background: white;
+        z-index: 500px;
+        bottom: 0;
+
     }
+ 
+    }
+
+}
 }
 
 /* Layout section */
